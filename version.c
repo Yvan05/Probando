@@ -26,3 +26,34 @@ int main (void)
    menu();
    return 0;
 }
+void menu(void)
+{
+   int opc;
+   char frase[50],frase_rev[50];
+   do
+   {
+      system ("cls");
+      printf("\n M  E   N   U");
+	  printf("\n1.- Funcion 1");
+	  printf("\n2.- Funcion 2");
+	  printf("\n3.- Salir");
+	  printf("\nESCOGE UNA OPCION.");
+      scanf ("%d",&opc);
+	  switch(opc)
+	    {
+		  case 1: 
+		  		  printf("Escriba una frase\t");
+		  		  fflush(stdin);
+				  gets(frase);
+				  cadena_1(frase);  
+		  break;
+		  case 2: printf("Escriba una frase\t");
+		  		  fflush(stdin);
+				  gets(frase);
+				  strcpy(frase_rev,frase);
+				  cadena_2(frase,frase_rev); 
+		  break;
+		}
+	  system("pause");
+   }while(opc != 3);
+}
